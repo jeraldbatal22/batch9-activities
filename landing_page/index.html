@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Guitar Shops</title>
+</head> 
+
+<body onresize="KeepRespo()">
+    <header id="header">
+      <nav id="nav-bar">
+        <ul class="links">
+          <li class="logo"><a><strong>Guitar</strong>Shop</a></li>
+          <!-- <li class="nav-close"><i class="far fa-window-close" id="close" onclick="showNavBar()"></i></li> -->
+          <li class="nav-menu"><i class="fas fa-bars" id="menu" onclick="showNavBar()"></i></li>
+          <li class="nav-links nav-links-1"><a href="#">Home</a></li>
+          <li class="nav-links nav-links-3"><a href="#instruments">Instruments</a></li>
+          <li class="nav-links nav-links-2"><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="content">
+        <div id="welcome">
+          <div id=content-text>
+            <h1>New Best <strong>Acoustic Guitar</strong> For 2021</h1>
+            <p>Starting at $4,999 USD</p>
+            <button type="button" id="buynow"><a href="#instruments"><i class="fas fa-shopping-cart"></i> Purchase Now</a></button>
+            <button type="button" id="signup"><a href="#" onclick="showForm()"><i class="fas fa-user-plus"></i> Signup</a></button>
+            <div id="video">
+              <!-- <img src="./images/guitar21.jpg" style="width: 610px; border-radius: 20%;"> -->
+              <iframe width="640" height="440" src="https://www.youtube.com/embed/gQHOPaLzgqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div id="form-hide">
+            <form id="form" action="" method="get">
+              <div>
+                <h3>Sign Up Form</h3>
+                <label>Firstname</label>
+                  <input type="text" required placeholder="firstname" id="firstname">
+                  <label>Lastname</label>
+                  <input type="text" required placeholder="lastname" id="lastname">
+                  <label>Email</label>
+                  <input type="email" required placeholder="example@example.com" id="email">
+                  <label>Passsword</label>
+                  <input type="password" required placeholder="password" id="password">
+                  <label>Phone#</label>
+                  <input type="number" required placeholder="09xxxxxxxxx" id="phone_number">
+                  <a href="#" id="back" onclick="showForm()">back</a>
+                  <button type="submit" id="signup" onclick="getInputValue()"><a href="#">Submit</a></button>
+              </div>
+            </form>
+          </div>
+
+            <div id="show-input">
+              
+            </div>
+
+      </div>
+    </header>
+
+    <div class="instruments" id="instruments">
+
+      <div>
+        <h1>Classic & Nylon Guitar</h1>
+        <img src="./images/yamahaguitar.png" onmouseover="ChangeBgColor('linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/acousticbackground.jpeg)', 'cover' , 'center', 'fixed')">
+        <div id="classic_prize"></div>
+        <p id="classic_p">Classical nylon guitar, nylon-string guitar or Spanish guitar) is a member of the guitar family used in classical music.The first electric guitars used in jazz were hollow archtop acoustic guitar bodies with electromagnetic transducers.</p>
+        <button type="button" id="classic_guitar" onclick="classicPrize()">View Prize</button>
+        <div id="buy_classic"></div>
+      </div>
+
+      <div>
+        <h1>Acoustic Guitar</h1>
+        <img src="./images/yamahaguitaracoustic.png" onmouseover="ChangeBgColor('linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/acousticbg.jpg)', 'cover' , 'center', 'fixed')">
+        <div id="acoustic_prize"></div>
+        <p id="acoustic_p">Acoustic guitar is a musical instrument in the guitar family. Typically, a guitar's body is a sound box, of which the top side serves as a sound board that enhances the vibration sounds of the strings. In standard tuning the guitar's six strings are tuned (low to high) E2 A2 D3 G3 B3 E4.</p>
+        <button type="button" id="acoustic_guitar" onclick="acousticPrize()">View Prize</button>
+        <div id="buy_acoustic"></div>
+      </div>
+
+      <div>
+        <h1>Electric Guitar</h1>
+        <img src="./images/yamahaguitarelectric.png" onmouseover="ChangeBgColor('linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/electricguitarbg.jpg)', 'cover' , 'center', 'fixed')">
+        <div id="electric_prize"></div>
+        <p id="electric_p">Electric guitar is a guitar that requires external amplification in order to be heard at typical performance volumes, unlike a standard acoustic guitar. It uses one or more pickups to convert the vibration of its strings into electrical signals, which ultimately are reproduced as sound by loudspeakers.</p>
+        <button type="button" id="electric_guitar" onclick="electricPrize()">View Prize</button>
+        <div id="buy_electric"></div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-area">
+        <div class="visit">
+          <h1>Visit Us</h1>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram-square"></i></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <h1>Social Media</h1>
+        </div>
+
+        <div class="contact">
+          <h1>Contact Us</h1>
+          <h3>Phone#: 0946246548</h3>
+          <h3>Telephone#:478941657</h3>
+          <h3>Address#:Caloocan City</h3>
+        </div>
+            
+        <div class="menu">
+          <h1>Menu</h1>
+            <h3><a href="#"><i class="fas fa-greater-than"></i> Home</a></h3>
+            <h3><a href="#instruments"><i class="fas fa-greater-than"></i> Instruments</a></h3>
+            <h3><a href="#footer"><i class="fas fa-greater-than"></i> Contact</a></h3>
+        </div>
+
+        <div class="links">
+          <h1>Quick Links</h1>
+          <h3><a>Terms and Condition</a></h3>
+          <h3><a>Privacy and Policies</a></h3>
+          <h3><a>Disclaimer</a></h3>
+        </div> 
+
+      </div>
+
+      <div class="footer-copyright">
+        <h3><a>copyright 2021 all right reserved</a></h3>
+      </div>
+
+    </footer>
+  </body>
+</html>
+<script src="https://kit.fontawesome.com/b0e17e7f5a.js" crossorigin="anonymous"></script>
+<script>
+
+let condition = true
+
+// navbar
+
+function showNavBar () {
+
+  if(condition) {
+    const nav_links = document.querySelectorAll('.nav-links');
+    const menu = document.querySelector('#menu')
+    for (const row of nav_links) {
+      row.style.display = "block"
+      condition = false
+    }
+  } 
+  else {
+    const nav_links = document.querySelectorAll('.nav-links');
+    const menu = document.querySelector('#menu')
+    for (const row of nav_links) {
+      row.style.display = "none"
+      condition = true
+    }
+  }
+}
+function KeepRespo () {
+  let w = window.innerWidth;
+  if(w > 915){
+      const nav_links = document.querySelectorAll('.nav-links');
+      const menu = document.querySelector('#menu')
+      for (const row of nav_links) {
+        row.style.display = "block"
+        condition = false
+      }
+    } else {
+      const nav_links = document.querySelectorAll('.nav-links');
+      const menu = document.querySelector('#menu')
+      for (const row of nav_links) {
+      row.style.display = "none"
+      condition = true
+    }
+  }
+}
+
+function showForm () {
+  const form = document.querySelector('#form-hide') 
+  const hide = document.querySelector('#content-text')
+  const showInput = document.querySelector('#show-input')
+
+
+  if(condition) {
+    hide.style.display = "none"
+    form.style.display = "block"
+    showInput.style.display = "none"
+    condition = false
+  } else {
+    hide.style.display = "block"
+    form.style.display = "none"
+    condition = true
+  }
+}
+
+function getInputValue () {
+  const firstname = document.querySelector('#firstname').value
+  const lastname = document.querySelector('#lastname').value
+  const email = document.querySelector('#email').value
+  const phone_number = document.querySelector('#phone_number').value
+
+  if(firstname === '' || lastname === '' || email === '' || phone_number === '') {
+    alert('PLEASE FILL UP ALL THE FORM')
+  } else {
+    const form = document.querySelector('#form-hide') 
+    const hide = document.querySelector('#content-text') 
+    const showInput = document.querySelector('#show-input')
+
+    hide.style.display = "none"
+    form.style.display = "none"
+    showInput.style.display = "block"
+    showInput.innerHTML = `
+    <h1>Successfully Signup</h1>
+    <h2>Firstname: ${firstname}</h2>
+    <h2>Lastname: ${lastname}</h2>
+    <h2>Email: ${email}</h2>
+    <h2>Phone#: ${phone_number}</h2>
+    <h2>Password: ********</h2>
+    <button id="buynow"><a href="#instruments"><i class="fas fa-shopping-cart"></i> Purchase Now</a></button>
+    <button id="buynow"><a href="#" onclick="showForm()"><i class="fas fa-arrow-left"></i> Back</a></button>`
+  }
+}
+
+
+function classicPrize () {
+  const classic_guitar = document.querySelector('#classic_guitar')
+  const classic_p = document.querySelector('#classic_p')
+  const classic_prize = document.querySelector('#classic_prize')
+  const buy_classic= document.querySelector('#buy_classic')
+
+  classic_p.style.display = "none"
+  classic_prize.innerHTML = `
+  <p>This classical guitar is made from China</p>
+  <h1>$5,999USD</h1>
+  `
+  classic_guitar.style.display = "none"
+  buy_classic.innerHTML = `
+  <button type="button" id="buynow_classic">Buy Now</button>
+  `
+}
+
+function acousticPrize () {
+  const acoustic_guitar = document.querySelector('#acoustic_guitar')
+  const acoustic_p = document.querySelector('#acoustic_p')
+  const acoustic_prize = document.querySelector('#acoustic_prize')
+  const buy_acoustic= document.querySelector('#buy_acoustic')
+
+
+  acoustic_p.style.display = "none"
+  acoustic_prize.innerHTML = `
+  <p>This Acoustic guitar is made from Japan</p>
+  <h1>$8,999USD</h1>
+  `
+  acoustic_guitar.style.display = "none"
+  buy_acoustic.innerHTML = `
+  <button type="button" id="buynow_acoustic">Buy Now</button>
+  `
+}
+
+function electricPrize () {
+  const electric_guitar = document.querySelector('#electric_guitar')
+  const electric_p = document.querySelector('#electric_p')
+  const electric_prize = document.querySelector('#electric_prize')
+  const buy_electric= document.querySelector('#buy_electric')
+
+  electric_p.style.display = "none"
+  electric_prize.innerHTML = `
+  <p>This Electric guitar is made from Korea</p>
+  <h1>$7,999USD</h1>
+  `
+
+  electric_guitar.style.display = "none"
+  buy_electric.innerHTML = `
+  <button type="button" id="buynow_electric">Buy Now</button>
+  `
+
+}
+
+  // instrument bg
+
+function ChangeBgColor(bg) {
+  const color = document.querySelector('.instruments')
+  color.style.backgroundImage = bg;
+  
+}
+
+
+
+</script>
