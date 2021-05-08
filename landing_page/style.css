@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Pacifico&family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/Wallpaperkiss_1135199.jpg) ;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+} 
+/* ELEMENTS TAG */
+
+strong {
+  color: #F7B219;
+}
+
+a , li{
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+/* NAVBAR */
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  font-family: 'Teko', sans-serif;
+}
+
+nav li{
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  /* color: #fff; */
+  color: #F7B219;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+nav .nav-links {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-right: 100px;
+}
+
+nav .logo {
+  flex: 1;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  user-select: none;
+}
+
+nav  #close {
+  /* display: none; */
+  font-size: 2.5rem;
+  color:#F7B219 ;
+  cursor: pointer;
+}
+
+nav  #menu {
+  display: none;
+  font-size: 2.5rem;
+  color:#F7B219 ;
+  cursor: pointer;
+}
+
+
+
+nav a:hover {
+  color:#fff;
+}
+
+
+
+/* CONTENT HOME */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 159px;
+  padding-top: 140px;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+}
+
+.content h1 {
+  font-size: 35px !important;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.content #welcome {
+  color: #fff;
+}
+
+.content #buynow {
+  background-color: #F7B219;
+  font-family: 'Teko', sans-serif;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 50px 15px;
+}
+
+.content #signup {
+  background-color: #F7B219;
+  /* background-color: rgb(136, 152, 240); */
+  font-family: 'Teko', sans-serif;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  margin-bottom: 95px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 50px 15px;
+
+}
+ 
+
+.content #signup:hover, .content #buynow:hover {
+  background-color: #fff;
+}
+
+/* HIDE FORM*/
+
+#form-hide {
+  display: none;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  color: #F7B219;
+  margin-bottom: 50px;
+}
+
+#back {
+  color: #fff !important;
+  text-decoration: underline;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* SHOW FORM */
+
+form {
+  max-width: 350px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form input {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form label {
+  float: left;
+}
+
+form button {
+  background-color: #F7B219;
+  font-family: 'Teko', sans-serif;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
+  margin-left: 101px;
+
+}
+
+form #back {
+  margin-right: 98px;
+}
+/* SHOW INPUT DATA  */
+
+#show-input {
+  display: none;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  /* color: #F7B219; */
+  padding: 5px 30px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+#show-input button {
+  background-color: #F7B219;
+  font-family: 'Teko', sans-serif;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 50px 15px;
+}
+
+/* INSTRUMENTS */
+
+.instruments {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  color: #F7B219;
+  cursor: pointer;
+  /* background-color:#fff; */
+  padding-bottom: 100px;
+}
+
+.instruments h1 {
+  border-radius: 15%;
+}
+
+.instruments p {
+  width: 500px;
+  line-height: 1.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.instruments button {
+  background-color:#F7B219;
+  font-family: 'Teko', sans-serif;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
+}
+
+.instruments button:hover {
+  background-color: #fff;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  margin-bottom: -15px;
+}
+
+footer .footer-copyright {
+  text-align: center;
+  color: #fff;
+}
+
+footer .footer-copyright a{
+  color: #F7B219 !important;
+}
+
+
+footer .footer-area {
+  width: 95%;
+  text-align: start;
+  font-family: 'Teko', sans-serif;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #F7B219 !important;
+
+}
+
+footer .footer-area a {
+  color: #F7B219 !important;
+}
+
+footer .footer-area .fab {
+  font-size: 2.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  color: #F7B219;
+}
+
+footer .footer-area .fab:hover, footer h1:hover  {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* MEDAI QUERIES */
+
+
+@media (max-width:915px) {
+  /* NAV */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  nav #menu {
+    display: block;
+  }
+
+  /* nav #close {
+    display: block;
+  } */
+
+  nav .nav-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-left: 80px;
+  }
+  nav li {
+    margin: 15px;
+  } 
+  
+  nav img {
+    margin-right: 30px;
+  }
+
+  form {
+    padding-top: 200px;
+  }
+
+  /* Content */
+
+  .content h1 {
+    margin-left: 60px;
+    width: 80%;
+  }
+
+  iframe {
+    width: 450px;
+    height: 440px;
+    margin-bottom: -80px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+
+}
+
+@media (max-width:375px) { 
+ 
+  .content {
+    margin-left: 100px;
+    width: 80%;
+  }
+
+  .instruments {
+    margin-left: 150px
+  }
+
+  iframe {
+    margin-left: 50px;
+  }
+
+  footer {
+    width: 140%;
+  }
+
+ nav #menu {
+    margin-right: 10px;
+  }
+}
+
+
