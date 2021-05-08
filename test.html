@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="test.css" rel="stylesheet">
+  <title>Tic Tac Toe</title>
+</head> 
+<body>
+  <div id="main_div">
+
+    <h1 id="title">Tic Tac Toe</h1>
+    <div id="player"></div>
+    <div id="message"></div>
+    <div>
+      <h3 id="x">Player X Turn</h3>
+      <h3 id="o">Player O Turn</h3>
+    </div>
+ 
+
+    <div id="board">
+      <div class="move" data-cell id="a"></div>
+      <div class="move" data-cell id="b"></div>
+      <div class="move" data-cell id="c"></div>
+      <div class="move" data-cell id="d"></div>
+      <div class="move" data-cell id="e"></div>
+      <div class="move" data-cell id="f"></div>
+      <div class="move" data-cell id="g"></div>
+      <div class="move" data-cell id="h"></div>
+      <div class="move" data-cell id="i"></div>
+    </div>
+
+    <div>
+      <button id="restart_btn">Play Again</button>
+    </div>
+
+  </div>
+  <!-- <div>
+    <h1>Choose your player</h1>
+    <label>Player X</label>
+    <label>Player Y</label>
+  </div> -->
+  
+  </body>
+</html>
+<script>
+
+const winningPattern = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+
+// const board = document.querySelector('#board')
+const x_player = 'X'
+const o_player = 'O'
+const move = document.querySelectorAll('[data-cell]')
+const winning_message = document.querySelector('#message')
+const restart_btn = document.querySelector('#restart_btn')
+const main_div = document.querySelector('#main_div')
+
+const x_move = document.querySelector('#x')
+const o_move = document.querySelector('#o')
+
+
+let playerMove
+
+
+restart_btn.addEventListener('click', function () {
+   location.reload();
+})
+
+
+startGame()
+
+
+function startGame() {
+  playerMove = false
+  move.forEach(cell => {
+  cell.addEventListener ('click', clickMove, {once: true})
+  })
+}
+
+function clickMove(e) {
+  const cell = e.target
+  const currentClass = playerMove ? o_player : x_player;
+  if(playerMove === false) {
+    x_move.style.display = "none"
+    o_move.style.display = "block"
+  } else {
+    o_move.style.display = "none"
+    x_move.style.display = "block"
+  }
+  
+  insertTurn(cell, currentClass)
+  if (checkWin(currentClass)) {
+    endGame(false)
+  } else if (Draw()) {
+    endGame(true)
+  } else {
+    swapTurns()
+  }
+}
+
+function endGame (draw) {
+  if(draw) {
+    x_move.style.display = "none"
+    o_move.style.display = "none"
+    winning_message.innerText = `DRAW!`
+    // board.style.display = "none"
+    // main_div.style.paddingTop = "150px"
+    // restart_btn.style.marginTop = "20px"
+  } else {
+    x_move.style.display = "none"
+    o_move.style.display = "none"
+    winning_message.innerText = `${playerMove ? o_player : x_player} win this match`
+    // board.style.display = "none"
+    // main_div.style.paddingTop = "150px"
+    // restart_btn.style.marginTop = "20px"
+  }
+}
+
+function Draw() {
+  return [...move].every(cell => {
+    return cell.classList.contains(x_player) || cell.classList.contains(o_player)
+  })
+}
+
+function insertTurn(cell, currentClass) {
+  cell.classList.add(currentClass)
+  cell.innerText = currentClass
+}
+
+function swapTurns() {
+  playerMove = !playerMove
+}
+
+function checkWin(currentClass) {
+//   for (const row of winningPattern) {
+//  console.log(row)
+//   }
+  return winningPattern.some(function (combination) {
+    return combination.every(function (index) {
+      return move[index].classList.contains(currentClass)
+    })
+  })
+
+}
+
+
+</script>

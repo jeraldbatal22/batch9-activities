@@ -280,10 +280,12 @@ function electricPrize () {
 
   // instrument bg
 
-function ChangeBgColor(bg) {
+function ChangeBgColor(bg,size,position,attachment) {
   const color = document.querySelector('.instruments')
   color.style.backgroundImage = bg;
-  
+  color.style.backgroundSize = size;
+  color.style.backgroundPosition = position;
+  color.style.backgroundAttachment = attachment;
 }
 
 
