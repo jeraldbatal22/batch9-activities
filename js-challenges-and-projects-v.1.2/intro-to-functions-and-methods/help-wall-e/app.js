@@ -4,6 +4,6 @@ const robot = document.querySelector('.robot')
 
 function moveRobot() {
     //add code here
-    
+    robot.style.padding = "300px"
 }
 robot.addEventListener('click', moveRobot)

@@ -1,8 +1,7 @@
-function sendText( ) {
+function sendText(firstname, lastname) {
     //Write your code here.
+    console.log(`Quick announcement: we won't be having classes today, enjoy your day ${firstname} ${lastname}`)
 }
-sendText()
-
 
 sendText('Jose', 'Rizal')
 sendText('Manny', 'Pacquiao')
