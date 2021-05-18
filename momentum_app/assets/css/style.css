@@ -58,10 +58,10 @@
 /* MAIN CONTENT */
 
 #main_content {
- /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/dark2.jpg) ;
+ /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/dark2.jpg) ; */
  background-size: cover;
  background-attachment: fixed;
- background-position: center; */
+ background-position: center;
  color: #fff;
  text-align: center;
  height: 100vh;
