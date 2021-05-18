@@ -5,10 +5,8 @@ const fridgeListDisplay = document.querySelector('#second-list')
 
 const buyList = ['chicharon', 'buko pie', 'mango', 'bacon' ]
 const fridge = ['blue', 'red' , 'green' , 'white', 'black']
-const remove_first = buyList.shift()
-fridge.unshift(remove_first)
-const remove_last = buyList.pop()
-fridge.unshift(remove_last)
+
+
 //Challenge: Please fill the fridge array with 5 items of your choice. 
 
 
@@ -21,9 +19,17 @@ fridge.unshift(remove_last)
 
 function moveUp(){
     //your code
-  const join = [...buyList, ...fridge]
-  buyListDisplay.innerHTML = ""
-  fridgeListDisplay.innerHTML = join
+  // const join = [...buyList, ...fridge]
+  // buyListDisplay.innerHTML = ""
+  // fridgeListDisplay.innerHTML = join
+  if(fridge.length > 0) {
+    const remove_first = fridge.shift()
+    buyList.unshift(remove_first)
+    buyListDisplay.innerHTML = buyList
+    fridgeListDisplay.innerHTML = fridge
+  } else {
+    alert(" FRIDGE IS EMPTY PLEASE BUY ITEM IN THE BUYLIST AND MOVE IT DOWN YOWW!!!! ")
+  }
 }
 
 upButton.addEventListener('click', moveUp)
@@ -33,9 +39,17 @@ upButton.addEventListener('click', moveUp)
 
 function moveDown(){
     //your code
-  const join = [...buyList, ...fridge]
-  buyListDisplay.innerHTML = join
-  fridgeListDisplay.innerHTML = ""
+  // const join = [...buyList, ...fridge]
+  // buyListDisplay.innerHTML = join
+  // fridgeListDisplay.innerHTML = ""
+  if(buyList.length > 0 ) {
+    const remove_last = buyList.pop()
+    fridge.unshift(remove_last)
+    buyListDisplay.innerHTML = buyList
+    fridgeListDisplay.innerHTML = fridge
+  } else {
+    alert("BUYLIST IS EMPTY PLEASE MOVE UP ALL THE ITEMS IN THE FRIDGE YEAHHH!!!")
+  }
 }
 
 downButton.addEventListener('click', moveDown)

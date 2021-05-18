@@ -8,8 +8,8 @@ var justiceLeague = [
 
 const league = document.querySelector('#league')
 
-for (let i = 0 ; i < justiceLeague.length ; i++) {
+for (const members of justiceLeague) {
     const li = document.createElement('li')
-    li.textContent = ` ${justiceLeague[i].name} - ${justiceLeague[i].superpower}`
+    li.textContent = `${members.name} - ${members.superpower}`
     league.appendChild(li)
 }
