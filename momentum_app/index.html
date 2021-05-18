@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b0e17e7f5a.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/util.js" defer></script>
+  <script src="./assets/js/app.js" defer></script>
+
+ <title>Document</title>
+</head>
+<body>
+<!-- Welcome Section -->
+ <section id="welcome">
+
+  <div id="welcome_question">
+    <h1>Welcome to momentum app <i class="far fa-grin-beam"></i> What is your name?</h1>
+  </div>
+
+  <div id="input_name">
+    <input type="text" required id="name_input"  placeholder="Type your name here" autocomplete="off">
+    <p id="alert_message_forname"></p>
+    <p>Enter to submit</p>
+  </div>
+
+  
+ </section>
+
+ <!-- MAIN CONTENT SECTION -->
+
+ <div id="main_content">
+
+  <!-- TODO SECTION -->
+  <section id="todo_main">
+
+    <div id="todo_list">
+      <label>TODO</label>
+      <input type="text" placeholder="Enter to add your todo" id="todo_input">
+      <button id="close_todo"><i class="fas fa-times-circle"></i></button>
+      <div id="not_compelete">NOT COMPLETED</div>
+      <div id="compelete">COMPLETED</div>
+    </div>
+
+    <div id="add_btn_todo">
+      <button type="button" id="add-todo">Add To Do</button>
+    </div>
+
+  </section>
+
+  <!-- TIME SECTION -->
+
+  <section id="time">
+
+  </section>
+
+  <!-- GREETINGS SECTION -->
+  
+  <section id="greetings">
+    <div id="greetings_div">
+      <h1><strong id="greetings_text"></strong><strong id="your_name" style="font-weight:bolder;"> </strong > <i class="far fa-grin-beam"></i></h1>
+    </div>
+  </section>
+
+  <!-- DARK AND LIGHT MODE SECTION -->
+  <section>
+
+    <div id="changeBg">
+      <i class="fas fa-star-half-alt" id="dark_light"></i>
+     </div>
+  </section>
+ 
+  <!-- TODAY SECTION  -->
+  <section id="today">
+    <div id="today_div">
+      <label id="today_focus">What is your main focus today?</label>
+      <p id="alert_message_fortoday"></p>
+      <input type="text" id="today_input" placeholder="Type Here" autocomplete="off">
+    </div>
+  </section>
+
+  <section id="today_checkbox">
+
+    <div id="today_checkbox_div">
+      <h1>Your main focus today is<h1>
+      <div id="your_todo">
+        <i class="fas fa-check-circle" id="icon_complete"></i>
+        <i class="fas fa-backspace" id="icon_back"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- QOUTES SECTION -->
+
+  <section id="qoutes">
+    <div id="qoutes_div">
+      <p id="random_qoutes">The soul would have no rainbow if the eyes had no tears. always put and your mind that your are always incredible no mather what happens.</p>
+      <i class="fas fa-chevron-circle-left" id="prev"></i>
+      <i class="fas fa-plus-circle" id="add"></i>
+      <i class="fas fa-chevron-circle-right trigger" id="next"></i>
+
+      <div class="modal">
+        <div class="modal-content">
+            <i class="fas fa-window-close close-button"></i>
+            <div>
+              <label>Add your qoutes below</label>
+              <textarea placeholder="Enter to add qoute" rows="4" cols="50" id="textarea"></textarea>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ </div>
+</body>
+</html>
