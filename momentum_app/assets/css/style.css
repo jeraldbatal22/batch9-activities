@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Newsreader:ital,wght@1,200&display=swap');
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+/* WELCOME SECTION */
+
+#welcome {
+ background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/light.jpg) ;
+ background-size: cover;
+ background-attachment: fixed;
+ background-position: center;
+ height: 100vh;
+ text-align: center;
+ color: #ffff;
+ font-family: 'Farro', sans-serif;
+ 
+}
+
+#welcome #welcome_question {
+ font-size: 2rem;
+ padding-top: 350px;
+}
+
+#welcome i {
+ color: yellow;
+}
+
+#welcome #input_name {
+ margin-top: 30px;
+}
+
+#welcome input{
+ color: #fff;
+ background: transparent;
+ padding: 20px 0px;
+ font-size: 2rem;
+ text-align: center;
+ border-radius: 5px;
+}
+
+#welcome #input_name p {
+ margin-top: 30px;
+ text-decoration: underline;
+}
+
+#welcome #alert_message_forname {
+ margin-top: 10px;
+ font-weight: bolder;
+ font-size: 1.2rem;
+}
+
+/* MAIN CONTENT */
+
+#main_content {
+ /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/dark2.jpg) ;
+ background-size: cover;
+ background-attachment: fixed;
+ background-position: center; */
+ color: #fff;
+ text-align: center;
+ height: 100vh;
+ font-family: 'Newsreader', serif;
+}
+
+/* DARKMODE LIGHT MODE */
+
+#changeBg {
+ display: flex;
+ justify-content: flex-end;
+ font-size: 50px;
+ margin-right: 40px;
+ transition: transform .2s;
+}
+
+#changeBg i {
+ cursor: pointer;
+}
+
+#dark_light:hover {
+ color: wheat;
+ transform: translateY(-10px);
+}
+
+
+/* TODO SECTION */
+
+#todo_main {
+ display: flex;
+ justify-content: flex-end;
+ flex-wrap: wrap;
+ float: right;
+ margin-top: 10px;
+ margin-right: 20px;
+}
+
+#todo_main button {
+ font-weight: bolder;
+ font-size: 1rem;
+ padding: 10px 15px;
+ cursor: pointer;
+ margin-top: 10px;
+ margin-right: 5px;
+ border-radius: 5px;
+ font-family: 'Goblin One', cursive;
+}
+
+#todo_main #add_btn_todo {
+ position: absolute;
+ font-weight: bolder;
+ font-size: 1rem;
+ padding: 8px;
+ cursor: pointer;
+ margin-top: 10px;
+ margin-right: 5px;
+ transition: transform .2s;
+}
+
+#todo_main #add_btn_todo button:hover {
+ transform: translateY(-10px);
+ background-color:  #e0c9ab;
+}
+
+/* TODO LIST */
+
+#todo_list {
+ display: none;
+ position: absolute;
+ background:#fff;
+ color: #000;
+ border-radius: 5px;
+ padding: 20px 10px;
+ margin-top: 20px;
+ margin-right: 10px;
+ font-family: 'Goblin One', cursive;
+}
+
+
+#todo_list input {
+ padding: 10px;
+ border-radius: 5px;
+ font-weight: bolder;
+}
+
+#todo_list i {
+ cursor: pointer;
+ font-size: 15px;
+ color: #000;
+}
+
+#todo_list button {
+ padding: 9px 9px;
+ cursor: pointer;
+ color: #000;
+}
+
+
+#todo_list > div {
+ margin: 20px 0px;
+ font-weight: bolder;
+}
+
+/* TIME */
+
+#time {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 30vh;
+ font-size: 4.5rem;
+ font-family: 'Newsreader', serif;
+}
+
+/* GREETINGS SECTION */
+
+#greetings {
+ display: flex;
+ justify-content: center;
+ font-size: 2rem;
+}
+
+#greetings .far {
+ color: yellow;
+}
+
+#greetings .fas {
+ color: red;
+}
+
+
+#greetings #greetings_text {
+ font-size: 3rem;
+}
+#greetings input[type="text"] {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  width: 15%;
+  text-align: center;
+  font-family: 'Goblin One', cursive;
+} 
+/* TODAY SECTION */
+
+#today {
+ height: 30vh;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ font-weight: bolder;
+}
+
+#today label {
+ font-size: 3rem;
+}
+
+#today input {
+ color: #fff;
+ background: none;
+ width: 15%;
+ margin: 10px auto auto auto;
+ text-align: center;
+ padding: 10px 0px;
+ font-size: 1.5rem;
+ display: flex;
+ margin-top: 10px;
+ border-radius: 5px;
+ font-family: 'Goblin One', cursive;
+ background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+#today_div #alert_message_fortoday {
+ margin-top: 10px;
+ font-weight: bolder;
+ font-size: 1.2rem;
+ text-decoration: underline;
+}
+
+/* TODAY CHECKBOX */
+
+#today_checkbox {
+ display: none;
+ margin-top: 75px;
+}
+
+#today_checkbox_div {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
+#today_checkbox h1{
+ margin-top: 20px;
+ font-size: 3rem;
+}
+
+#today_checkbox h2 {
+  cursor: pointer;
+}
+
+#today_checkbox .fas {
+ cursor: pointer;
+ font-size: 3rem;
+}
+
+#today_checkbox .fas:hover {
+ transform: translateY(-10px);
+}
+
+/* QOUTES SECTION */
+
+#qoutes {
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ height: 26vh;
+}
+
+#qoutes i {
+ font-size: 2.5rem;
+ margin: 10px 10px;
+ cursor: pointer;
+}
+
+#qoutes #prev:hover {
+ transform: translateX(-5px);
+}
+#qoutes #next:hover {
+ transform: translateX(5px);
+}
+#qoutes #add:hover {
+ transform: translateY(-5px);
+}
+
+#qoutes p {
+ font-size: 2rem;
+ width: 70%;
+ text-align: center;
+ margin: auto;
+}
+
+/* MODAL ADD QOUTES */
+
+
+.modal {
+ position: fixed;
+ background-color: rgba(0, 0, 0, 0.5);
+ color: #000;
+}
+
+.modal textarea {
+ resize: none;
+ margin: 20px 0px;
+}
+
+.close-button {
+ cursor: pointer;
+ background-color: #000;
+ color: #000;
+}
+
+.show-modal {
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1.0);
+ transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal {
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+ visibility: hidden;
+ transform: scale(1.1);
+}
+
+.modal-content {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: white;
+ padding: 20px;
+ border-radius: 0.5rem;
+}
+
+
+.close-button {
+ float: right;
+ width: 1.5rem;
+ line-height: 1.5rem;
+ text-align: center;
+ cursor: pointer;
+ border-radius: 0.25rem;
+ background-color: lightgray;
+}
+
+.show-modal {
+ opacity: 1;
+ visibility: visible;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #qoutes {
+    padding-bottom: 20px;
+  }
+
+  #qoutes p {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 575px) {
+
+  #time {
+  font-size: 2rem;
+  padding-top: 120px;
+  }
+
+  #changeBg {
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+
+  #greetings #greetings_div strong{
+    font-size: 1.5rem;
+  }
+
+  #greetings i {
+    display: none;
+  }
+
+  #today label {
+    font-size: 1.5rem;
+  }
+
+  #today input {
+    width: 200px;
+  }
+
+  #qoutes  {
+    padding-bottom: 40px;
+  }
+
+  #qoutes p {
+    width: 100%;
+    margin-right: 200px;
+    font-size: 1rem;
+  }
+  #today_checkbox_div h1 {
+    margin-bottom: 40px;
+    font-size: 1rem;
+   }
+
+   #today_checkbox_div  {
+    margin-top: -90px;
+  }
+  #greetings #putname {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 280px) { 
+  #qoutes  {
+    padding-bottom: 40px;
+  }
+
+  #qoutes i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) { 
+  #qoutes  {
+    padding-bottom: 50px;
+  }
+
+  #qoutes i {
+    font-size: 1rem;
+  }
+  #your_todo {
+    margin-top: -30px;
+  }
+
+  #todo_list {
+    margin-left: 30px;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  .modal-content textarea {
+    width: 80%;
+  }
+
+  #greetings #putname {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 600px) { 
+  body {
+    position: absolute;
+  }
+
+  #welcome h1{
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: -100px;
+  }
+
+  #welcome input {
+    width: 90%;
+  }
+
+  #welcome #input_name{
+    margin-top: 0;
+  }
+}
