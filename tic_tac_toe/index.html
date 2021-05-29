@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <script src="./assets/js/app.js" defer type="module"></script>
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+
+  <div id="player_choose">
+    <h1>Choose your player?</h1>
+    <div>
+      <button id="choose_x_btn">Player X</button>
+      <button id="choose_o_btn">Player O</button>
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="title">
+      <h1 id="game_title">Tic Tac Toe</h1>
+      <h1 id="action_turn"></h1>
+      <!-- <h1 id="x_action_turn">X player turn</h1>
+      <h1 id="o_action_turn">O player turn</h1> -->
+      <h1 id="winning_message"></h1>
+    </div>
+    <!-- <i class="fas fa-circle"></i>
+    <i class="fas fa-times"></i> -->
+    <div id="gameboard">
+      <div class="cell" data-cell="0" id="a"></div>
+      <div class="cell" data-cell="1" id="b"></div>
+      <div class="cell" data-cell="2" id="c"></div>
+      <div class="cell" data-cell="3" id="d"></div>
+      <div class="cell" data-cell="4" id="e"></div>
+      <div class="cell" data-cell="5" id="f"></div>
+      <div class="cell" data-cell="6" id="g"></div>
+      <div class="cell" data-cell="7" id="h"></div>
+      <div class="cell" data-cell="8" id="i"></div>
+    </div>
+
+    <div id="button">
+      <button id="prev_btn"><i class="fas fa-chevron-circle-left"></i></button>
+      <button id="restart_btn">Play Again</button>
+      <button id="next_btn"><i class="fas fa-chevron-circle-right"></i></button>
+    </div>
+
+  </div>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/b0e17e7f5a.js" crossorigin="anonymous"></script>
