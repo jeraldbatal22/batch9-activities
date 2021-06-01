@@ -10,15 +10,6 @@ const move_x = "X"
 const move_o = "O"
 let player_move
 
-// let moved = [[...board]];
-
-// let boards = [
-//   ['', '', ''],
-//   ['', '', ''],
-//   ['', '', '']
-// ];
-
-
 let board = ['', '', '', '', '', '', '', '', ''];
 let moved = [['', '', '', '', '', '', '', '', '']];
 
@@ -95,7 +86,6 @@ const choosePlayer = () => {
 choosePlayer()
 
 const placeMove = (board, div_cell, current_move) => {
-console.log(board)
 
   div_cell.classList.add(current_move)
   for (let i = 0; i < board.length ; i++) {
@@ -136,9 +126,8 @@ const checkWin = (current_move) => {
     
     if (win) {
       combination.forEach(index => {
-        cells[index].style.color = "white"
+        cells[index].className = "winning_pattern"
         // cells[index].style.background = "black"
-
       });
       return true
     }
@@ -168,7 +157,6 @@ const showHistory = () => {
 
 const saveMove = () => {
   moved.push([...board])
-  // console.log(moved.push([...board]))
 }
 
 const showHistoryMove = (board) => {
