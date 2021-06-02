@@ -80,7 +80,7 @@ a#tribute-link:hover {
 }
 
 #main {
-  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/batal-jerald/tribute_page/images/westlife.jpg) ;
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/westlife.jpg) ;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -113,9 +113,8 @@ nav ul {
   height: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around; 
-  display: none;
-
  }
 
 nav a {
@@ -161,7 +160,7 @@ nav .icon .line {
   margin: 5px;
   border-radius: 25%;
 }
-
+/* 
 @media (max-width: 768px) {
   nav .logo{
     float: none ;
@@ -189,7 +188,7 @@ nav .icon .line {
   nav :checked ~ .links {
     bottom: 0;
   }
-}
+} */
 
 /* image div */
 
