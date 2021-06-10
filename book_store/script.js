@@ -14,14 +14,17 @@ class BookStore extends MainStore {
     super(name, list, earnings);
   }
 
+  // ADDING BOOK
   addBook(title, quantity, value) {
     this.list.push({title, quantity, value})
   }
 
+  // RESTOCK BOOK
   reStock(title, quantity) {
     this.list.some((book) => book.title === title ?  book.quantity += quantity : null)
   }
 
+  // SELL BOOK
   sellBook(name, qty) {
     const data = this.list.find((book) => book.title === name)
     if (typeof data !== 'undefined') {
@@ -36,10 +39,12 @@ class BookStore extends MainStore {
     message.NOT_AVAILABLE(name)
   }
 
+  //TOTAL EARNINGS
   totalEarnings() {
     message.TOTAL_EARNINGS(this.name, this.earnings)
   }
 
+  // LIST OF INVENTORY
   listInventory() {
     this.list.map((book) => {
     message.INVENTORY_LIST(book.title, book.quantity, book.value)
@@ -49,7 +54,7 @@ class BookStore extends MainStore {
 }
 
 const store = new BookStore('Avion Store', [], 0) // MAIN STORE
-
+// const main = new MainStore(name, list,)
 //ADD BOOK
 store.addBook('Cinder', 20, 3000) 
 store.addBook('The Purdge', 20, 4000) 
