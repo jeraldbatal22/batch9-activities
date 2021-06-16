@@ -1,4 +1,4 @@
- const message = {
+ const messageMixxin = {
   STOCK_LEFT: (title, quantity) => {
     // console.log(`${title} book has only ${quantity} stock left`)
   },
@@ -16,4 +16,4 @@
   }
 }
 
-export default message
+export default messageMixxin
