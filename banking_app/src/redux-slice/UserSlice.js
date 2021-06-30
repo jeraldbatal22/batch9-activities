@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import profileImage from '../images/profile.jpg'
+
 import moment from 'moment'
 
 const UserSlice = createSlice({
@@ -14,6 +16,8 @@ const UserSlice = createSlice({
         balance: 1000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 1,
       },
       {
@@ -26,6 +30,8 @@ const UserSlice = createSlice({
         balance: 1000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -38,6 +44,8 @@ const UserSlice = createSlice({
         balance: 0,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -50,6 +58,8 @@ const UserSlice = createSlice({
         balance: 2000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -62,6 +72,8 @@ const UserSlice = createSlice({
         balance: 6000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -74,6 +86,8 @@ const UserSlice = createSlice({
         balance: 3000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -86,6 +100,8 @@ const UserSlice = createSlice({
         balance: 4000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
       {
@@ -98,6 +114,8 @@ const UserSlice = createSlice({
         balance: 2000,
         history: [],
         expenses: [],
+        usersDeposit: [],
+        profileImage:profileImage,
         role: 2,
       },
   ],
@@ -157,9 +175,28 @@ const UserSlice = createSlice({
         state[index].expenses[index2].title = payload.editExpense.title
         state[index].expenses[index2].amount = parseFloat(payload.editExpense.amount)
       }
-    }
+    },
+
+    updateProfilePicture:(state, {payload}) => {
+      const index = state.findIndex((user) => user.id === payload.authId)
+      state[index].profileImage = payload.uploadImage
+      // console.log(payload.uploadImage)
+    },
+    updateProfileInfo:(state, {payload}) => {
+      const action = payload.action
+      if(action === 'editProfileInfo') {
+        const index = state.findIndex((user) => user.id === payload.authId)
+        state[index].firstname = payload.editProfileInfo.firstname
+        state[index].lastname = payload.editProfileInfo.lastname
+        state[index].username = payload.editProfileInfo.username
+      }
+      if(action === 'newPassword') {
+        const index = state.findIndex((user) => user.id === payload.user)
+        state[index].password = payload.newPassword
+      }
+    },
   },
 })
 
-export const { updateNewBalance, registerNewUser, saveToHistory, saveToExpenses } = UserSlice.actions
+export const { updateNewBalance, registerNewUser, saveToHistory, saveToExpenses, updateProfilePicture, updateProfileInfo } = UserSlice.actions
 export default UserSlice.reducer

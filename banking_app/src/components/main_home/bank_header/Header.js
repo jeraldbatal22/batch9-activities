@@ -60,13 +60,15 @@ const Header = () => {
       {
         user.role === 2 ? 
         <>
-        <Button className={classes.btn} color="inherit" onClick={() => setRoute('bank-home')}> My Bank</Button>
-        <Button className={classes.btn} color="inherit" onClick={() => setRoute('my-profile')}>My Profile</Button>
+          <Button className={classes.btn} color="inherit" onClick={() => setRoute('bank-home')}> My Bank</Button>
+          <Button className={classes.btn} color="inherit" onClick={() => setRoute('my-profile')}>My Profile</Button>
         </> 
         :
-        <Button className={classes.btn} color="inherit" onClick={() => setRoute('users-table')}> Users </Button>
+        <>
+          <Button className={classes.btn} color="inherit" onClick={() => setRoute('deposit-transaction')}> Transaction </Button>
+          <Button className={classes.btn} color="inherit" onClick={() => setRoute('users-table')}> Users </Button>
+        </>
       }
-        
       <Button className={classes.btn} color="inherit" onClick={() => setRoute('')}> Logout </Button>
       
       </Toolbar>

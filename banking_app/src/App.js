@@ -8,6 +8,7 @@ import Home from './components/login_home/home/Home'
 import Register from './components/login_home/register/Register'
 import Login from './components/login_home/login/Login'
 import { useSelector } from 'react-redux'
+import DepositTransaction from './components/main_home/admin/DepositTransaction'
 
 function App() {
 
@@ -44,6 +45,11 @@ function App() {
               <Route path="/users-table">
                 <Header />
                 <UsersTable />
+              </Route>
+
+              <Route path="/deposit-transaction">
+                <Header />
+                <DepositTransaction />
               </Route>
             </Switch>)  : <Redirect to="/login"></Redirect>
         }
