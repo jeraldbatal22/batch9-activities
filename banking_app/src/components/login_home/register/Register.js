@@ -51,6 +51,7 @@ const Register = () => {
         balance: 0,
         history: [],
         expenses: [],
+        usersDeposit: [],
         role:2
     }})
   }

@@ -1,5 +1,5 @@
 import './BankInfo.css'
-import image from '../../../../images/myimg.png'
+// import image from '../../../../images/myimg.png'
 import { useSelector } from 'react-redux'
 
 const BankInfo = () => {
@@ -14,7 +14,7 @@ const BankInfo = () => {
           <h2>Member Since </h2>
         </div>
         <div className="account-info">
-          <h3>{ user.firstname }</h3>
+          <h3>{ user.firstname } { user.lastname }</h3>
           <h3>#{ user.id }</h3>
           <h3>
             {user.date}
@@ -23,9 +23,9 @@ const BankInfo = () => {
         <div className="your-balance">
           <div>
             <img
-              src={image}
+              src={user.profileImage}
               alt="jerald"
-              style={{ width: '180px', borderRadius: '100px' }}
+              style={{ width: '230px', borderRadius: '100%' }}
             />
           </div>
           <div>
