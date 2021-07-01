@@ -51,7 +51,7 @@ const Expense = () => {
   const paginate = (pagenumber) => {
     setCurrentPage(pagenumber)
   }
-
+/////aaaa
   const pageNumbers = []
 
   for (let i = 1; i <= Math.ceil(user.expenses.length / postsPerPage) ; i++) {
