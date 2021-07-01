@@ -39,7 +39,7 @@ const Login = () => {
     const res = users.filter((user) => user.username === formUser.username && user.password === formUser.password)
     
     if (res.length === 0) {
-      return errorMessage('Error!', 'Incorrect Username and Password!')
+      return errorMessage('Error!', 'Incorrect Username or Password!')
     }  else {
       dispatch(loginUser({ 
         isSuccess: true, 

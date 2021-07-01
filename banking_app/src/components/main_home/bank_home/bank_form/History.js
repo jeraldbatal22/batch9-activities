@@ -1,9 +1,21 @@
 import './History.css'
 import { useSelector } from 'react-redux'
-
+import { useState } from 'react'
+import HistoryPagination from './HistoryPagination'
 const History = () => {
   const { auth, users } = useSelector((store) => store )
   const user = users.find((user) => user.id === auth.authId)
+
+  const [currenPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(5)
+
+  const indexOflastPost = currenPage * postsPerPage;
+  const indexOfFirstPost = indexOflastPost - postsPerPage
+  const currentPosts = user.history.slice(indexOfFirstPost, indexOflastPost)
+  console.log(currentPosts)
+  const paginate = (pagenumber) => {
+    setCurrentPage(pagenumber)
+  }
   return (
     <>
       <div className="history_div">
@@ -20,7 +32,7 @@ const History = () => {
             </thead>
             <tbody>
               {
-                user.history.map((item, index) => (
+                currentPosts.map((item, index) => (
                   <tr key={index}>
                     <td>
                       {
@@ -34,8 +46,13 @@ const History = () => {
                   </tr>
                 ))
               }
+
             </tbody>
+
           </table>
+
+        <HistoryPagination postsPerPage={postsPerPage} totalPosts={user.history.length} paginate={paginate}/>
+
         </>  
       ): <h1>NO HISTORY FOUND</h1> }
         

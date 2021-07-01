@@ -24,12 +24,17 @@ export const ExpenseForm = ({ cancelFormBtn }) => {
 
   const onHanddleSubmit = (e) => {
     e.preventDefault()
+
     if (newExpense.title === '') {
       return errorMessage('Error!', 'Please input title')
     }
 
     if (newExpense.amount === '') {
       return errorMessage('Error!', 'Please input amount')
+    }
+    
+    if (newExpense.amount < 100) {
+      return errorMessage('Error!', '$100 above minimun expense required')
     }
 
     const user = users.find((user) => user.id === auth.authId)
