@@ -39,6 +39,25 @@ const Expense = () => {
     setShowEditForm(false)
   }
 
+  // Pagination 
+
+  const [currenPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(5)
+
+  const indexOflastPost = currenPage * postsPerPage;
+  const indexOfFirstPost = indexOflastPost - postsPerPage
+  const currentPosts = user.expenses.slice(indexOfFirstPost, indexOflastPost)
+
+  const paginate = (pagenumber) => {
+    setCurrentPage(pagenumber)
+  }
+
+  const pageNumbers = []
+
+  for (let i = 1; i <= Math.ceil(user.expenses.length / postsPerPage) ; i++) {
+    pageNumbers.push(i)
+  }
+
   return (
     <div className="expense">
       <div className="expense-table">
@@ -56,7 +75,7 @@ const Expense = () => {
             </tr>
           </thead>
           <tbody>
-            {user.expenses.map((expense, index) => (
+            {currentPosts.map((expense, index) => (
               <tr key={index}>
                 <td>{expense.title}</td>
                 <td>$ {expense.amount}</td>
@@ -70,6 +89,15 @@ const Expense = () => {
           
           </tbody>
         </table>
+
+        <div className="pagination">
+          {
+            pageNumbers.map(number => (
+              <button key={number} onClick={() => paginate (number)}>{number}</button>
+            ))
+          }
+        </div>
+
         { showEditForm? <EditExpenseForm hideFormBtn={hideFormBtn} editExpense={editExpense} setEditExpense={setEditExpense}/> : ''}
       </div>
     </div>
