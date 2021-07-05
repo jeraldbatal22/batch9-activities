@@ -45,6 +45,10 @@
   font-weight: bolder;
 }
 
+input:focus {
+  outline: none !important;
+}
+
 .user-profile .account_balance {
   color: #fff;
 }
@@ -76,7 +80,7 @@
 } */
 
 .profile_picture img {
-  width: 230px;
+  width: 180px;
   border-radius: 50%;
 }
 

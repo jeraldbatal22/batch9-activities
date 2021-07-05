@@ -23,6 +23,7 @@ const Deposit = () => {
       errorMessage('Error!', '$1000 above minimun deposit required')
     } else {
     const action = 'deposit'
+    const all = 'all' //// for history purpose to filter all the history
       dispatch(updateNewBalance({
         amount, 
         action,
@@ -32,7 +33,8 @@ const Deposit = () => {
         date: moment().format('MMMM Do YYYY h:mm a'),
         amount,
         action,
-        userId
+        userId,
+        all
       }))
       setAmount('')
       successMessage('Well done', `Successfully deposit $ ${amount}`)
