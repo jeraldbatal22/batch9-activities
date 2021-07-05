@@ -47,3 +47,17 @@
 .account-balance .your-balance span {
   font-size: 4rem;
 }
+
+.bank_statement_btn {
+  padding: 2px 10px;
+  display: flex;
+  background: none;
+  border: none;
+  color: #fff;
+  margin: auto;
+  cursor: pointer;
+}
+
+.bank_statement_btn:hover {
+  color: #f7b219;
+}

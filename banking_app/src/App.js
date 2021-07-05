@@ -8,6 +8,7 @@ import Home from './components/login_home/home/Home'
 import Register from './components/login_home/register/Register'
 import Login from './components/login_home/login/Login'
 import { useSelector } from 'react-redux'
+import BankChat from './components/main_home/bank_home/bank_chat/BankChat'
 
 function App() {
 
@@ -31,6 +32,11 @@ function App() {
 
           { (auth.isAuth)  ? 
             (<Switch>
+              <Route path="/bank-chat">
+                <Header />
+                <BankChat />
+              </Route>
+
               <Route path="/bank-home">
                 <Header />
                 <BankHome />

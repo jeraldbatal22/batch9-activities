@@ -64,6 +64,7 @@ const SendMoney = () => {
         `Your remaining balance is $ ${sendAmount.balance}`,
       )
     } else {
+      const all = 'all'
       dispatch(updateNewBalance({
         amount: parseFloat(sendMoney.amount), 
         action:'sendMoney',
@@ -76,7 +77,8 @@ const SendMoney = () => {
         amount:sendMoney.amount,
         receiver:sendAmount,
         sender:user,
-        userId
+        userId,
+        all
       }))
       dispatch(saveToHistory({
         action:'recievedMoney',
@@ -84,7 +86,8 @@ const SendMoney = () => {
         amount:sendMoney.amount,
         receiver:sendAmount,
         sender:user,
-        userId
+        userId,
+        all
       }))
       successMessage(
         'Successfully Send Money',

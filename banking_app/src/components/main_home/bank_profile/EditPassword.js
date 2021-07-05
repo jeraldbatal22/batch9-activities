@@ -28,8 +28,14 @@ const EditPassword = ({setShowChangePasswordForm}) => {
     if(user.password !== editProfileInfo.currentPassword) {
       return errorMessage('Error Password', 'Current Password does not match')
     }
+    if(editProfileInfo.newPassword === "") {
+      return errorMessage('Error', 'Please Input New password')
+    }
     if (editProfileInfo.newPassword.length < 8) {
       return errorMessage('Error', 'New Password must be greater than 8')
+    }
+    if(editProfileInfo.confirmNewPassword === "") {
+      return errorMessage('Error', 'Please Input New password')
     }
     if (editProfileInfo.newPassword !== editProfileInfo.confirmNewPassword) {
       return errorMessage('Error', 'New password does not match')

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { errorMessage, successMessage } from '../../../utils/message'
 import { registerNewUser } from '../../../redux-slice/UserSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import profileImage from './../../../images/profile.jpg'
 import moment from 'moment'
 const Register = () => {
 
@@ -26,17 +27,17 @@ const Register = () => {
     }
     setFormTouched({ ...formTouched })
   }
-  
+
   const [newUser, setNewUser] = useState({
-    firstname:'',
-    lastname:'',
-    username:'',
-    password:'',
-    confirmPassword:'',
+    firstname: '',
+    lastname: '',
+    username: '',
+    password: '',
+    confirmPassword: '',
   })
 
   const onHanddleChange = (e) => {
-    const {name, value} = e.target
+    const { name, value } = e.target
     newUser[name] = value
     if (newUser[name] !== '') {
       newUser[name] = value
@@ -46,14 +47,17 @@ const Register = () => {
     setNewUser({
       ...newUser,
       ...{
-        id:  parseFloat(Date.now().toString()),
+        id: parseFloat(Date.now().toString()),
         date: moment().format('MMMM Do YYYY'),
         balance: 0,
         history: [],
         expenses: [],
         usersDeposit: [],
-        role:2
-    }})
+        role: 2,
+        profileImage: profileImage,
+        chatMessageHistory: [],
+      }
+    })
   }
   const users = useSelector(({ users }) => users)
 
@@ -62,9 +66,8 @@ const Register = () => {
 
     for (const key in newUser) {
       if (newUser[key] === '') {
-        message += `${
-          key.charAt(0).toUpperCase() + key.slice(1)
-        } is required <br>` //
+        message += `${key.charAt(0).toUpperCase() + key.slice(1)
+          } is required <br>` //
       }
     }
 
@@ -77,7 +80,7 @@ const Register = () => {
     }
 
     const isExist = users.findIndex((user) => user.username === newUser.username)
-    
+
     if (isExist !== -1) {
       message += 'Username is already Exist '
     }
@@ -108,7 +111,7 @@ const Register = () => {
         </div>
 
         <form>
-        <p>{formTouched.firstname ? 'Firstname is required.' : ''}</p>
+          <p>{formTouched.firstname ? 'Firstname is required.' : ''}</p>
           <div className="row">
             <input
               type="text"

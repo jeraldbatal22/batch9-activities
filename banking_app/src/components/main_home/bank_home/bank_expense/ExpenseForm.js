@@ -7,7 +7,7 @@ import moment from 'moment'
 
 export const ExpenseForm = ({ cancelFormBtn }) => {
   const dispatch = useDispatch()
-  const {auth ,users}= useSelector((store) => store )
+  const {auth }= useSelector((store) => store )
   const userId = auth.authId
 
   const [newExpense, setNewExpense] = useState(
@@ -37,14 +37,14 @@ export const ExpenseForm = ({ cancelFormBtn }) => {
       return errorMessage('Error!', '$100 above minimun expense required')
     }
 
-    const user = users.find((user) => user.id === auth.authId)
+    // const user = users.find((user) => user.id === auth.authId)
 
-    if (newExpense.amount > user.balance) {
-      return errorMessage(
-        `Not enough balance in your account`,
-        `Your remaining balance is $ ${user.balance}`,
-      )
-    }
+    // if (newExpense.amount > user.balance) {
+    //   return errorMessage(
+    //     `Not enough balance in your account`,
+    //     `Your remaining balance is $ ${user.balance}`,
+    //   )
+    // }
     else {
       const action = 'expense'
       dispatch(updateNewBalance({

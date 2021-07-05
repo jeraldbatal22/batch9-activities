@@ -32,7 +32,11 @@
 .history_div select {
   /* float: right; */
   padding: 10px 20px;
-  width: 20%;
+  cursor: pointer;
+}
+
+.history_div select option{
+  font-size: 1.2rem;
   cursor: pointer;
 }
 /* 

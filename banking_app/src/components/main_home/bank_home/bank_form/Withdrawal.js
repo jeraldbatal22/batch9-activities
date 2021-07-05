@@ -33,6 +33,7 @@ const Withdrawal = () => {
       )
     } else {
       const action = 'withdrawal'
+      const all = 'all'
       dispatch(updateNewBalance({
         amount, 
         action,
@@ -42,24 +43,22 @@ const Withdrawal = () => {
         date: moment().format('MMMM Do YYYY h:mm a'),
         amount,
         action,
-        userId
+        userId,
+        all
       }))
       setAmount('')
       successMessage(`Well done `, `Successfully withdraw $ ${amount}`)
     }
-   
-
   }
 
   return (
     <div className="withdrawal_div">
-      <form>
+      <form onSubmit={onHandleSubmit}>
         <h1>WITHDRAWAL</h1>
         <div className="form-action">
           <label>Withdraw Exact Amount</label>
           <input type="number" placeholder="Withdraw Exact Amount" value={amount} onChange={ (event) => setAmount(event.target.value)} />
-          <p></p>
-          <button type="button" onClick={onHandleSubmit}>PROCEED</button>
+          <button type="submit">PROCEED</button>
         </div>
       </form>
     </div>
