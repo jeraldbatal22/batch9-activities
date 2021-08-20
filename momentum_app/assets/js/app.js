@@ -36,7 +36,7 @@ function display() {
           main_content.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./assets/images/dark2.jpg)"
         } else {
           greetings_text.innerHTML = `Goodmorning <i class="fas fa-heart"></i> Have a nice day `
-          main_content.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./assets/images/light1.jpg)"
+          main_content.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/images/sun.jpg)"
         }
       }
     }
@@ -164,7 +164,7 @@ function display() {
       main_content_background.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./assets/images/dark2.jpg)"
       condition = false
     } else {
-      main_content_background.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./assets/images/light1.jpg)"
+      main_content_background.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/images/sun.jpg)"
       greetings_text.innerHTML = `Goodmorning <i class="fas fa-heart"></i> Have a nice day `
 
       condition = true
